@@ -7,7 +7,7 @@ class H(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)   # reply "OK"
         self.end_headers()        # end of the reply's header lines
-        self.wfile.write(b"hello from my container\n")   # the text sent back
+        self.wfile.write(b"hello from V2\n")   # the text sent back
 
 # Start the server on port 9999  and keep it running
 # "0.0.0.0" means: accept visitors from outside the container
