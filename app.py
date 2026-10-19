@@ -11,4 +11,4 @@ class H(BaseHTTPRequestHandler):
 
 # Start the server on port 9999  and keep it running
 # "0.0.0.0" means: accept visitors from outside the container
-HTTPServer(("0.0.0.0", 9999 ), H).serve_forever()
+HTTPServer(("0.0.0.0", 8000 ), H).serve_forever()

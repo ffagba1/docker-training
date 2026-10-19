@@ -8,3 +8,5 @@ jobs:
       - run: docker build -t myapp:${{ github.sha }} .
       - run: docker run -d -p 9999:9999 --name myapp myapp:${{ github.sha }}
       - run: sleep 3 && curl --fail localhost:9999
+      - if: failure()
+        run: docker logs myapp
