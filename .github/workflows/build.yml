@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t myapp:${{ github.sha }} .
-      - run: docker run -d -p 8000:8000 --name myapp myapp:${{ github.sha }}
+      - run: docker run -d -p 9999:9999 --name myapp myapp:${{ github.sha }}
       - run: sleep 3 && curl --fail localhost:9999
